@@ -7,7 +7,7 @@ cask "ttf-lxgw-wenkai-regular" do
   desc "An open-source Chinese font derived from Fontworks' Klee One."
   homepage "https://github.com/lxgw/LxgwWenKai"
 
-  font "TTF/LXGWWenKai-Regular.ttf"
+  font "LXGWWenKai-Regular.ttf"
 
   caveats do
     free_license "https://github.com/lxgw/LxgwWenKai/raw/v#{version}/SIL_Open_Font_License_1.1.txt"
