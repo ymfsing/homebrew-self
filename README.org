@@ -22,6 +22,12 @@ An open-source Chinese font derived from Fontworks' Klee One.
 
 This rb forks from [[https://github.com/oh-my-home/homebrew-fonts][oh-my-home/homebrew-fonts]]
 
+*** [[https://github.com/universal-ctags/ctags][universal-ctags/ctags]]
+
+A maintained ctags implementation.
+
+This rb forks from [[https://github.com/universal-ctags/homebrew-universal-ctags][universal-ctags/homebrew-universal-ctags]]
+
 *** [[https://github.com/Dreamacro/clash/wiki/premium-core-features][clash premium]]
 
 A rule-based tunnel in Go. The premium core features has TUN mode, scripts and so on.
