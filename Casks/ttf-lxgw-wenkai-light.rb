@@ -1,5 +1,5 @@
 cask "ttf-lxgw-wenkai-light" do
-  version "1.120"
+  version "1.210"
   sha256 :no_check
 
   url "https://github.com/lxgw/LxgwWenKai/releases/download/v#{version}/LXGWWenKai-Light.ttf"
