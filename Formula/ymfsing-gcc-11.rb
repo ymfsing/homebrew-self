@@ -1,4 +1,4 @@
-class YmfsinggccAT11 < Formula
+class Ymfsinggcc11 < Formula
   desc "GNU compiler collection"
   homepage "https://gcc.gnu.org/"
   if Hardware::CPU.arm?
