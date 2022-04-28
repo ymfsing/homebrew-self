@@ -1,4 +1,4 @@
-class Ymfsinglibgccjit11 < Formula
+class Libgccjit < Formula
   desc "JIT library for the GNU compiler collection"
   if Hardware::CPU.arm?
     # Branch from the Darwin maintainer of GCC with Apple Silicon support,
