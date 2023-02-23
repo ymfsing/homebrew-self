@@ -1,17 +1,33 @@
 class ClashPremium < Formula
-  desc "Rule-based tunnel in Go, the pre-built premium version"
+  desc "Rule-based tunnel in Go, the pre-built premium version and copy from https://github.com/laggardkernel/homebrew-tap ."
   homepage "https://github.com/Dreamacro/clash/releases/tag/premium"
-  version "2021.12.07"
-  url "https://github.com/Dreamacro/clash/releases/download/premium/clash-darwin-amd64-#{version}.gz"
-  # sha256 ""
+  version "2023.02.16"
   license "GPL-3.0"
 
   livecheck do
-    url :homepage
-    regex(/(\d{4}[.-]\d{2}[.-]\d{2})/i)
+    # # release log too long, links content is folded
+    # url :homepage
+    # regex(%r{href=.+?/releases/download/premium/[^"]+(\d{4}[.-]\d{2}[.-]\d{2})}i)
+    url "https://release.dreamacro.workers.dev/"
+    regex(%r{href="(\d{4}[.-]\d{2}[.-]\d{2})[^"]*}i)
     strategy :page_match do |page, regex|
       page.scan(regex).flatten.uniq.sort
     end
+  end
+
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-darwin-amd64-#{version}.gz"
+  # url "https://github.com/Dreamacro/clash/releases/download/premium/clash-darwin-amd64-#{version}.gz"
+  elsif OS.mac? && Hardware::CPU.arm?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-darwin-arm64-#{version}.gz"
+  elsif OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is-64-bit?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-linux-amd64-#{version}.gz"
+  elsif OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is-32-bit?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-linux-386-#{version}.gz"
+  elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is-64-bit?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-linux-armv8-#{version}.gz"
+  elsif OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is-32-bit?
+    url "https://release.dreamacro.workers.dev/#{version}/clash-linux-armv7-#{version}.gz"
   end
 
   # resource will auto unpacked
@@ -90,33 +106,12 @@ class ClashPremium < Formula
     EOS
   end
 
-  plist_options manual: "clash -d #{HOMEBREW_PREFIX}/etc/clash"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-            <array>
-              <string>#{opt_bin}/clash</string>
-              <string>-d</string>
-              <string>#{etc}/clash</string>
-            </array>
-            <key>RunAtLoad</key>
-            <true/>
-            <key>KeepAlive</key>
-            <true/>
-            <key>StandardOutPath</key>
-            <string>#{var}/log/clash/clash.log</string>
-            <key>StandardErrorPath</key>
-            <string>#{var}/log/clash/clash.log</string>
-          </dict>
-      </plist>
-    EOS
+  service do
+    require_root true
+    run [opt_bin/"clash", "-d", etc/"clash"]
+    # keep_alive { succesful_exit: true }
+    log_path var/"log/clash/clash.log"
+    error_log_path var/"log/clash/clash.log"
   end
 
   test do
