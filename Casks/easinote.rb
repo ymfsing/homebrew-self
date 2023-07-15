@@ -1,8 +1,8 @@
 cask "easinote" do
-  version "5.2.0.9.6837"
+  version "5.2.0.9.6858"
   sha256 :no_check
 
-  url "https://imlizhi-store-https.seewo.com/EasiNote_Mac_5.2.0.9.6837.f57(20230626194945).dmg"
+  url "https://imlizhi-store-https.seewo.com/EasiNote_Mac_5.2.0.9.6958.49f(20230630181604).dmg"
   name "EasiNote"
   desc "为互动教学而生。"
   homepage "https://easinote.seewo.com/"
