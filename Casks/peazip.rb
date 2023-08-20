@@ -1,9 +1,9 @@
 cask "peazip" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "9.2.0"
-  sha256 arm:   "4116f990e017ed2aaf4283338ee957feb5a7df2aabcf49a5ee16ec863429817e",
-         intel: "7783e6c6fc5072526fc680b1addbfe39203cb6fc170cfe23b82a36d3052899a3"
+  version "9.4.0"
+  sha256 arm:   "9f1c361273fd2beda788a6b83a76186940bcbb9c2292bc9e1865603b9b50a28c",
+         intel: "0892e81c36b643a76cf6fbea5f767bbbe395cd11a58beff9a34d2be437b2f88b"
 
   url "https://github.com/peazip/PeaZip/releases/download/#{version}/peazip-#{version}.DARWIN.#{arch}.dmg",
       verified: "github.com/peazip/PeaZip/"
