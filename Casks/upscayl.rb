@@ -1,5 +1,5 @@
 cask 'upscayl' do
-  version '2.0.1'
+  version '2.8.6'
   sha256 :no_check
 
   url "https://github.com/upscayl/upscayl/releases/download/v#{version}/Upscayl-#{version}-mac.dmg"
