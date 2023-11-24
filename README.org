@@ -15,9 +15,3 @@ brew tap ymfsing/self
 Vimac is a macOS productivity application that provides keyboard-driven navigation and control of the macOS Graphical User Interface (GUI).
 
 This rb forks from [[https://github.com/kidonng/homebrew-malt][kidonng/homebrew-malt]]
-
-*** [[https://github.com/Dreamacro/clash/wiki/premium-core-features][clash premium]]
-
-A rule-based tunnel in Go. The premium core features has TUN mode, scripts and so on.
-
-This rb forks from [[https://github.com/laggardkernel/homebrew-tap][laggardkernel/homebrew-tap]]
