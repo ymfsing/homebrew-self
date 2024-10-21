@@ -1,8 +1,8 @@
 cask "follow" do
-  version "Nightly 0.0.1"
+  version "nightly.20241020"
   sha256 :no_check
 
-  url "https://github.com/RSSNext/Follow/releases/download/nightly-0.0.1-nightly.20241018/Follow-0.0.1-nightly.20241018-macos-universal.dmg"
+  url "https://github.com/RSSNext/Follow/releases/download/nightly-0.0.1-#{version}/Follow-0.0.1-#{version}-macos-universal.dmg"
   name "Follow"
   desc "Next generation information browser."
   homepage "https://github.com/RSSNext/Follow"
