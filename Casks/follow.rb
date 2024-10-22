@@ -1,5 +1,5 @@
 cask "follow" do
-  version "nightly.20241020"
+  version "nightly.20241018"
   sha256 :no_check
 
   url "https://github.com/RSSNext/Follow/releases/download/nightly-0.0.1-#{version}/Follow-0.0.1-#{version}-macos-universal.dmg"
