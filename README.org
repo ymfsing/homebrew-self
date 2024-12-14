@@ -1,0 +1,17 @@
+* homebrew-self
+
+This is a homebrew-tap for myself.
+
+** Usage
+
+#+BEGIN_SRC bash
+brew tap ymfsing/self
+#+END_SRC
+
+** Casks
+
+*** [[https://github.com/dexterleng/vimac][vimac]]
+
+Vimac is a macOS productivity application that provides keyboard-driven navigation and control of the macOS Graphical User Interface (GUI).
+
+This rb forks from [[https://github.com/kidonng/homebrew-malt][kidonng/homebrew-malt]]
