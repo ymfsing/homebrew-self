@@ -3,16 +3,16 @@ cask 'emacs-app' do
   desc 'GNU Emacs text editor'
   homepage 'https://github.com/jimeh/emacs-builds'
 
-  version '2025-03-01.1e84a87.master'
+  version 'Emacs.2025-03-01.1e84a87.master'
 
   on_arm do
     sha256 'be3ad5120555b3e12ccd8ca904e106c0916808c3cb9e8caab6ef5ea984dcf973'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.#{version}/Emacs.#{version}.macOS-11.arm64.dmg'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/#{version}/#{version}.macOS-11.arm64.dmg'
     depends_on macos: '>= :big_sur'
   end
   on_intel do
     sha256 'a67e1e5e4883cbf304ecb43197557a1ecf8a68e648bee9618d5c1406c683a54e'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.#{version}/Emacs.#{version}.macOS-11.x86_64.dmg'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/#{version}/#{version}.macOS-11.x86_64.dmg'
     depends_on macos: '>= :big_sur'
   end
 
