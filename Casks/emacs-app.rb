@@ -3,6 +3,8 @@ cask 'emacs-app' do
   desc 'GNU Emacs text editor'
   homepage 'https://github.com/jimeh/emacs-builds'
 
+  # https://github.com/jimeh/homebrew-emacs-builds/tree/main/Casks
+
   version '2025-03-04.c18089a.master'
 
   on_arm do
