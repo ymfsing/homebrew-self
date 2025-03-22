@@ -1,4 +1,4 @@
-cask "FlowDown" do
+cask "flowfown" do
   version "1.2.42"
   sha256 :no_check
 
