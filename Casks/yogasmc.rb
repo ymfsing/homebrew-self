@@ -9,7 +9,7 @@ cask "yogasmc" do
 
   # auto_updates true
 
-  # app "YogaSMC.app"
+  app "YogaSMCNC.app"
 
   # zap trash: [
   #       "~/Library/Caches/com.seewo.easinote5.mac",
