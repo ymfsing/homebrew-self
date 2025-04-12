@@ -5,16 +5,16 @@ cask 'emacs-app' do
 
   # https://github.com/jimeh/homebrew-emacs-builds/blob/main/Casks/emacs-app-nightly.rb
 
-  version '2025-04-11.695edc5.master'
+  version '2025-03-21.b216365.master'
 
   on_arm do
-    sha256 '3b2b4bc519d7a9c944e4707f2e7e14668ef870e1d086f595ec5ea4839a30b7a1'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.2025-04-11.695edc5.master/Emacs.2025-04-11.695edc5.master.macOS-11.arm64.dmg'
+    sha256 'f514dbb9fbc57de0a0c788a305099b1741544d1410b76b529281e3c635cdcedd'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.2025-03-21.b216365.master/Emacs.2025-03-21.b216365.master.macOS-11.arm64.dmg'
     depends_on macos: '>= :big_sur'
   end
   on_intel do
-    sha256 '140fbd1d4f3bb375222f573adbf8062ea13736873a46d9a08caa184f2cd659ee'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.2025-04-11.695edc5.master/Emacs.2025-04-11.695edc5.master.macOS-11.x86_64.dmg'
+    sha256 '6866940eaf4231b3130341cc9200d4d523539fb3c981935bae5523b98f30ae25'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs.2025-03-21.b216365.master/Emacs.2025-03-21.b216365.master.macOS-11.x86_64.dmg'
     depends_on macos: '>= :big_sur'
   end
 
