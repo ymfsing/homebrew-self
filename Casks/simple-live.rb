@@ -8,4 +8,6 @@ cask "simple-live" do
   desc "简简单单的看直播"
   homepage "https://github.com/xiaoyaocz/dart_simple_live"
 
+  app "Simple Live.app"
+
 end
