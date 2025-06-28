@@ -38,7 +38,6 @@ cask 'emacs-app' do
       emacs-app-nightly-28
       emacs-app-nightly-29
       emacs-app-pretest
-      emacs
       emacs-nightly
       emacs-pretest
       emacs-mac
