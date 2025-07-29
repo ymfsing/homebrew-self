@@ -1,6 +1,6 @@
 cask "hipixel" do
 
-  version "v0.3"
+  version "v0.3.1"
   sha256 :no_check
 
   url "https://github.com/okooo5km/HiPixel/releases/download/#{version}.0/HiPixel-#{version}.dmg"
