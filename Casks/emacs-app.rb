@@ -31,7 +31,7 @@ cask 'emacs-app' do
   end
 
   conflicts_with cask: %w[
-    emacs-app
+    emacs-app-good
     emacs-app-monthly
     emacs-app-nightly
     emacs-app-nightly-28
