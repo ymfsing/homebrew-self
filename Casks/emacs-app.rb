@@ -22,7 +22,7 @@ cask 'emacs-app' do
     url 'https://github.com/jimeh/emacs-builds.git'
     strategy :git do |tags|
       tags.map do |tag|
-        m = /^Emacs\.(\d{4}-\d{2}-01\.\w+\.master)$/.match(tag)
+        m = /^Emacs-(\d+\.\d+[a-z]*(-\d+)?)$/.match(tag)
         next unless m
 
         m[1]
@@ -30,19 +30,21 @@ cask 'emacs-app' do
     end
   end
 
-  conflicts_with cask: %w[
-    emacs-app-good
-    emacs-app-monthly
-    emacs-app-nightly
-    emacs-app-nightly-28
-    emacs-app-nightly-29
-    emacs-app-pretest
-    emacs
-    emacs-nightly
-    emacs-pretest
-    emacs-mac
-    emacs-mac-spacemacs-icon
-  ]
+  conflicts_with(
+    cask: %w[
+      emacs-app-good
+      emacs-app-monthly
+      emacs-app-nightly
+      emacs-app-nightly-28
+      emacs-app-nightly-29
+      emacs-app-pretest
+      emacs
+      emacs-nightly
+      emacs-pretest
+      emacs-mac
+      emacs-mac-spacemacs-icon
+    ]
+  )
 
   app 'Emacs.app'
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
