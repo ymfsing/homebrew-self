@@ -4,8 +4,8 @@ class Mole < Formula
 
   desc "Comprehensive macOS cleanup and application uninstall tool"
   homepage "https://github.com/tw93/mole"
-  url "https://github.com/tw93/Mole/archive/refs/tags/V1.4.1.tar.gz"
-  sha256 "db4998a23f53edb8c8dd0f963ced66222d71e70d8b8d08375b5a1aa758bfdc7b"
+  url "https://github.com/tw93/Mole/archive/refs/tags/V1.6.2.tar.gz"
+  sha256 "2e34b019c3425ad1dfb68c875e2744cd9c53eba22cd380e1c9ef78cc01b56743"
   license "MIT"
   head "https://github.com/tw93/mole.git", branch: "main"
 
@@ -23,11 +23,24 @@ class Mole < Formula
               "SCRIPT_DIR=\"#{libexec}\""
 
     bin.install "mole"
+
+    # Install mo alias (short command)
+    inreplace "mo",
+              'SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"',
+              "SCRIPT_DIR=\"#{bin}\""
+
+    bin.install "mo"
   end
 
   def caveats
     <<~EOS
       Mole is a macOS cleanup tool that requires administrative privileges for some operations.
+
+      You can use either 'mole' or 'mo' command:
+        mo                # Interactive menu
+        mo clean          # System cleanup
+        mo uninstall      # Remove applications
+        mo analyze        # Disk space explorer
 
       Update functionality is disabled when installed via Homebrew.
       To update, use: brew upgrade mole
@@ -36,5 +49,6 @@ class Mole < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/mole --version")
+    assert_match "Mole", shell_output("#{bin}/mo --help")
   end
 end
