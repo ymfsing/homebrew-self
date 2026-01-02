@@ -5,9 +5,9 @@ cask "pure-live" do
 
   url "https://github.com/liuchuancong/pure_live/releases/download/v#{version}/PureLive-#{version}+22-macOS.dmg"
   name "Pure Live"
-  desc "第三方直播播放器，支持多个主流直播平台的视频流播放。"
+  desc "纯粹直播:哔哩哔哩/虎牙/斗鱼/快手/抖音/网易cc/M38自定义源应有尽有。"
   homepage "https://github.com/liuchuancong/pure_live"
 
-  app "PureLive.app"
+  app "纯粹直播.app"
 
 end
