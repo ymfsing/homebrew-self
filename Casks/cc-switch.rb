@@ -2,12 +2,12 @@ cask "cc-switch" do
 
   # https://github.com/farion1231/homebrew-ccswitch/blob/main/Casks/cc-switch.rb
 
-  version "3.8.0"
-  sha256 "62df8ac322046ffc5c69b8f8ac827fc787da7ddd11bf647ec94b9abe4806625e"
+  version "3.10.3"
+  sha256 "5ce89988ead9a9c135721c598ff6bf343a897d4b1987b92e9de4834730021528"
 
   url "https://github.com/farion1231/cc-switch/releases/download/v#{version}/CC-Switch-v#{version}-macOS.tar.gz"
   name "CC Switch"
-  desc "Configuration manager for Claude Code and Codex providers"
+  desc "Configuration manager for Claude Code, Codex, Gemini and OpenCode"
   homepage "https://github.com/farion1231/cc-switch"
 
   livecheck do
