@@ -1,7 +1,7 @@
 cask "kakuku" do
 
   # https://github.com/tw93/homebrew-tap/blob/main/Casks/kakuku.rb
- 
+
   version "0.6.0"
   sha256 "bf691254e9e280a512e4233445157350ad734cedcd1b50d015d9a6d5c68d7f07"
 
