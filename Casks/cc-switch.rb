@@ -2,8 +2,8 @@ cask "cc-switch" do
 
   # https://github.com/farion1231/homebrew-ccswitch/blob/main/Casks/cc-switch.rb
 
-  version "3.12.3"
-  sha256 "221b7f1caa5c739cabe1d13605b3bbdd1e28e82c0a1df2d0753d1c56e8c0b0f3"
+  version "3.13.0"
+  sha256 "42cd5bace5c3325beeab16466a255bcdfb66420c3cbf5ae7d90e93cd7c7473ad"
 
   url "https://github.com/farion1231/cc-switch/releases/download/v#{version}/CC-Switch-v#{version}-macOS.tar.gz"
   name "CC Switch"
