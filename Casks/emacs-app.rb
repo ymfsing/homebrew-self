@@ -5,17 +5,17 @@ cask 'emacs-app' do
 
   # https://github.com/jimeh/homebrew-emacs-builds/blob/main/Casks/emacs-app.rb
 
-  version '30.2-1'
+  version '31.0.90-pretest'
 
   on_arm do
-    sha256 '8277021ed3eb716333120638ffc2565c1b893e9146e06738bb3521630f39eb19'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs-30.2-1/Emacs.2025-08-14.636f166.emacs-30-2-1.macOS-11.arm64.dmg'
-    depends_on macos: :big_sur
+    sha256 'eb1ff19221a5cadbccc23354bd665ce1049518569db8dc53fc2b08ee2f9db4ab'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs-31.0.90-pretest/Emacs.2026-06-05.0ee48ac.emacs-31-0-90-pretest.macOS-11.arm64.dmg'
+    depends_on macos: '>= :big_sur'
   end
   on_intel do
-    sha256 '9eade73998b1772fb8fba74cfa02ca25ab06285287a6b2bccafc14f609860f8c'
-    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs-30.2-1/Emacs.2025-08-14.636f166.emacs-30-2-1.macOS-11.x86_64.dmg'
-    depends_on macos: :big_sur
+    sha256 '05bb80e0aaffee8cb1b9630a947424533ddb2530c81922eb5b06588ac1a5c093'
+    url 'https://github.com/jimeh/emacs-builds/releases/download/Emacs-31.0.90-pretest/Emacs.2026-06-05.0ee48ac.emacs-31-0-90-pretest.macOS-11.x86_64.dmg'
+    depends_on macos: '>= :big_sur'
   end
 
   livecheck do

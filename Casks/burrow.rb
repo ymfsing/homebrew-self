@@ -2,8 +2,8 @@ cask "burrow" do
 
   # https://github.com/caezium/homebrew-tap/blob/main/Casks/burrow.rb
 
-  version "0.8.3"
-  sha256 "93c5739b01ac03a9cb24026483f3fff21e46c2786aeca064a2f4676340c0d776"
+  version "0.9.1"
+  sha256 "fdba21582029acc949edb3e46a879d421b7d3da9bb0019f159dc182ee75b3403"
 
   url "https://github.com/caezium/Burrow/releases/download/v#{version}/Burrow-#{version}.zip"
   name "Burrow"

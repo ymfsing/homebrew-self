@@ -1,7 +1,7 @@
 cask "supercmd" do
 
-  version "1.0.25"
-  sha256 "5a595643f245354e5c38a8ea5351e5efb880bc71fad6aafba73371406813642b"
+  version "1.0.26"
+  sha256 "0a828f9002e6b2bd3be479d73983d5f121efb5d013f8a2f8f52fd828eed1591c"
 
   url "https://github.com/SuperCmdLabs/SuperCmd/releases/download/#{version}/SuperCmd-#{version}.dmg"
   name "SuperCmd"
