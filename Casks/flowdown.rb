@@ -1,5 +1,5 @@
 cask "flowdown" do
-  version "1.2.42"
+  version "4.9.5"
   sha256 :no_check
 
   url "https://github.com/Lakr233/FlowDown-App/releases/download/#{version}/FlowDown-v#{version}.zip"
