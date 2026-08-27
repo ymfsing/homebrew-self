@@ -4,8 +4,9 @@ cask "tinycast" do
 
   # `version` and `sha256` are bumped automatically by the tinycast release workflow
   # (stable channel). Placeholder until the first stable release is cut.
-  version "0.9.8"
-  sha256 "b71e7ee8a5de57ba85f3fa4656e5ce1742fad3b0ddb653be176e0e2beaa9095d"
+
+  version "0.10.1"
+  sha256 "f6d6e6fea0b1710bfa8487fc4e17e96c649801d8fe429c05294c421baa9161ae"
 
 
   url "https://github.com/abue-ammar/tinycast/releases/download/v#{version}/Tinycast-#{version}.dmg",
