@@ -1,14 +1,16 @@
 cask "burrow" do
 
   # https://github.com/caezium/homebrew-tap/blob/main/Casks/burrow.rb
-
-  version "0.9.2"
-  sha256 "d91091b8779dbadf430bfd35496b9284cbf26f7feab16d5971436dc92f09bd01"
+ 
+  version "0.14.0"
+  sha256 "3e5d5d36ccb6292ff69451a2f88a748f6f8a16687bb1c1bae2e013723062ef2d"
 
   url "https://github.com/caezium/Burrow/releases/download/v#{version}/Burrow-#{version}.zip"
   name "Burrow"
   desc "Free, open-source native GUI for the Mole CLI"
   homepage "https://github.com/caezium/Burrow"
+
+  auto_updates true
 
   # Homebrew 5.1.11 (May 2026) changed `depends_on macos: :sonoma` from
   # "exactly Sonoma" to "Sonoma or newer" and deprecated the `">= :sonoma"`
@@ -22,18 +24,6 @@ cask "burrow" do
   end
 
   app "Burrow.app"
-
-  # Pre-1.0 builds aren't notarized yet, so clear the quarantine flag to
-  # avoid a Gatekeeper block on first launch. Remove this once the app
-  # ships signed + notarized.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/Burrow.app"], sudo: false
-  end
-
-  caveats <<~EOS
-    Burrow is an unsigned pre-1.0 build. If macOS still blocks it, right-click
-    the app and choose Open, or run:  xattr -cr "#{appdir}/Burrow.app"
-  EOS
 
   zap trash: [
     "~/Library/Application Support/Burrow",
