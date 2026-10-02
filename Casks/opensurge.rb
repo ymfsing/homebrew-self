@@ -10,7 +10,8 @@ cask "opensurge" do
   desc "Surge-style whole-home gateway and control plane for macOS with IPv4/IPv6 support— mihomo TUN, dnsmasq-powered DHCP/DNS, per-device routing, and an agent-friendly validation workspace."
   homepage "https://github.com/YTwsy/OpenSurge-for-Mac"
 
-  app "OpenSurge.app"
+  depends_on :macos
+  pkg "OpenSurge-for-Mac-#{version}-#{arch}-unsigned.pkg"
 
   # zap trash: [
   #       "~/Library/Preferences/com.company.peazip.plist",
