@@ -1,9 +1,9 @@
 cask "opensurge" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.4"
-  sha256 arm:   "9c46fb7c80bc06e09996d93f54aaf80703b633ea423ab56bfb0b861a6ef19c5a",
-         intel: "a251ac105b51d11242e960df96a88624cc653d8c4b29b3eea1d96bd870f9ef8a"
+  version "0.3.0"
+  sha256 arm:   "e056c005dfe257b6eb9f6aeefd4fae6eb7e02940002b156422989789e3423814",
+         intel: "d33e220bd86bc063ec4c96b35dbe73d8e7944259a0418fac4f7439dac45b37ba"
 
   url "https://github.com/YTwsy/OpenSurge-for-Mac/releases/download/v#{version}/OpenSurge-for-Mac-#{version}-#{arch}-unsigned.pkg"
   name "OpenSurge"
