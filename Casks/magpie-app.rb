@@ -3,9 +3,9 @@ cask "magpie-app" do
 
   # https://github.com/yetone/magpie-releases/blob/main/Casks/magpie-app.rb
 
-  version "0.1.1231"
-  sha256 arm:   "c0a1ab3bc7b1b880289c10971cdd6e0853dba1a9305c30b8e8f67c24a8db6af6",
-         intel: "9c0d63f04ba7735593031832557189598461748fac87ef690cbd843144978fbb"
+  version "0.1.1402"
+  sha256 arm:   "b6cc4687577176822d10648aee80aabeb01a8cdfca1d52ebf51831013d894288",
+         intel: "bd7a9df83f82b2fe5908a0fce51fe3bc5442a2c400e64ef438a3bdd78ea4aca3"
 
   url "https://github.com/yetone/magpie-releases/releases/download/v#{version}/magpie-darwin-#{arch}.zip"
   name "magpie"
